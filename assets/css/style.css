@@ -199,6 +199,27 @@ th{
     gap: 20px;
 }
 
+/* Contact */
+#home__4{
+    grid-area: acerca;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#formulario{
+    width: 60%;
+    border: solid 1px #FFA2F3;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 #footer{
     grid-area: footer;
     width: 90%;
@@ -238,6 +259,7 @@ th{
     /* Acerca de */
     #home__1{
         width: 100%;
+        height: 570px;
         color: white;
         padding-left: 40px;
         padding-right: 40px;
@@ -305,7 +327,6 @@ th{
         color: white;
         padding-left: 40px;
         padding-right: 40px;
-        padding-bottom: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -354,6 +375,21 @@ th{
         width: 500px;
         height: 300px;
     }
+
+    /* Contact */
+    #home__4{
+        width: 800px;
+    }
+
+    #formulario{
+        width: 20%;
+        border: solid 1px #FFA2F3;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
 
     #footer{
         padding-left: 100px;
