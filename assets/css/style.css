@@ -188,16 +188,14 @@ th{
 }
 
  /* Galería */
-#imagenes__galeria{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+#galeria{
+    height: 400px;
 }
+
+#imagenes__galeria{
+    display: none;
+}
+
 
 /* Contact */
 #home__4{
@@ -308,9 +306,12 @@ th{
         margin-top: 20px;
     }
 
-    #home__2 table{
-        height: 50vh;
+    #home__2{
+        width: 700px;
+        height: 40vh;
+        margin-bottom: 200px;
     }
+
 
     #home__3{
         padding-right: 100px;
@@ -375,6 +376,14 @@ th{
     #imagenes__galeria img{
         width: 500px;
         height: 300px;
+    }
+
+    #galeria{
+        height: 810px;
+    }
+
+    #carouselExampleIndicators1{
+        display: none;
     }
 
     /* Contact */
