@@ -1,0 +1,78 @@
+/*Desktop Media Query*/
+
+@mixin desktop{
+    @media screen and (min-width:1280px) {
+        @content
+    }
+}
+
+$colores:(
+    fondo1: #9b51e0,
+    fondo2: black,
+    titulos: #FFA2F3,
+    texto: white,
+    tabla: #25367c,
+); 
+
+$tamaño-letra-mobile:(
+    titulos: 15pt,
+    texto: 10pt,
+);
+
+$tamaño-letra-desktop:(
+    titulos: 20pt,
+    texto: 18pt,
+);
+
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#container{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    
+    "cabecera"
+    "acerca"
+    "tabla"
+    "video"
+    "footer"
+    ;
+    background: linear-gradient(#9b51e0 0%, black 20%, #9b51e0 300%);
+    width: 100%;
+
+    .titulos{
+        color: map-get($colores,"titulos");
+        font-size: map-get($tamaño-letra-mobile,"titulos");
+        padding-bottom: 10px
+    }
+
+    .texto{
+        color: map-get($colores,"texto");
+        font-size: map-get($tamaño-letra-mobile,"texto");
+        padding-bottom: 10px;
+    }
+
+    @include desktop{
+
+        .titulos{
+            color: map-get($colores,"titulos");
+            font-size: map-get($tamaño-letra-desktop,"titulos");
+            padding-bottom: 10px
+        }
+    
+        .texto{
+            color: map-get($colores,"texto");
+            font-size: map-get($tamaño-letra-desktop,"texto");
+            padding-bottom: 10px;
+        }
+
+    }
+
+}
+

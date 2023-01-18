@@ -1,0 +1,14 @@
+@use '_commons' as c;
+
+#footer{
+    grid-area: footer;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+
+    @include c.desktop{
+        padding-left: 100px;
+    }
+}
