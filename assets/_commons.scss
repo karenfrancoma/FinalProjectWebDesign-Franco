@@ -1,7 +1,13 @@
-/*Desktop Media Query*/
+/* Media Queries*/
 
 @mixin desktop{
     @media screen and (min-width:1280px) {
+        @content
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width:1280px) {
         @content
     }
 }
@@ -29,6 +35,8 @@ $tamaño-letra-desktop:(
     padding: 0%;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+
 
 #container{
     box-sizing: border-box;
@@ -75,4 +83,8 @@ $tamaño-letra-desktop:(
     }
 
 }
+
+
+
+
 

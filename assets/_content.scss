@@ -4,16 +4,15 @@
 
 /* Contenido central website home */
 #box__1{
+    height: 100%;
     grid-area: acerca;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 
     @include c.desktop{
         width: 100%;
-        height: 570px;
+        height: 410px;
         color: map-get(c.$colores,"texto");
         padding-left: 40px;
         padding-right: 40px;
@@ -34,7 +33,7 @@
         }
 
         img{
-            width: 700px;
+            width: 670px;
         }
 
     }
@@ -42,26 +41,41 @@
 }
 
 /* Tabla y video */
-#tabla__video{
-    @include c.desktop{
-        width: 100%;
-        color: map-get(c.$colores,"texto");
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        box-sizing: border-box;
-        margin-top: 20px;
-    }
-}
-
 #box__2{
     grid-area: tabla;
-    @extend #box__1; 
+    @extend #box__1;
 
     @include c.desktop{
+        width: 100%;
+        height: 100%;
+        padding: 30px;
         flex-direction: column;
-        width: 48%;
-        padding-left: 100px;
+        border-top: 1px solid #FFA2F3;
+        border-bottom: 1px solid #FFA2F3;
+
+    }
+
+    #videos{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include c.desktop{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        iframe{
+            width: 560px;
+            height: 315px;
+
+            @include c.desktop{
+                width: 560px;
+                height: 315px;
+            }
+        }
     }
 }
 
@@ -70,52 +84,20 @@
     @extend #box__1; 
 
     @include c.desktop{
-        width: 50%;
+        width: 40%;
+        height: 100%;
         flex-direction: column;
-        justify-items: left;
-        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
     }
 
-    .titulos{
-        @include c.desktop{
-            width: 100%;
-            justify-content: left;
-            padding-left: 40px;
-        }
-    }
-
-    iframe{
-        height: 200px;
-
-        @include c.desktop{
-        width: 500px;
-        height: 400px;
-        }
-    } 
 }
 
 /* Discografía mobile */
 
-
-
-#box__4{
-    @extend #box__1; 
-    @include c.desktop{
-        width: 100%;
-        color: map-get(c.$colores,"texto");
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 40px;
-        padding-bottom: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        box-sizing: border-box;
-    }
-}
-
 #box__5{
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -132,7 +114,7 @@
 
     iframe{
         width: 90%;
-        height: 300px;
+        height: 400px;
 
         @include c.desktop{
             width: 90%;
@@ -143,8 +125,30 @@
 
 /* Tour */
 
+#box__4{
+    @extend #box__1; 
+
+    @include c.desktop{
+        width: 100%;
+        height: 30%;
+        color: map-get(c.$colores,"texto");
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        box-sizing: border-box;
+    }
+
+}
+
 .tabla__tour{
-    height: 50vh;
+    height: 80vh;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
 
     @include c.desktop{
         width: 50%;
@@ -193,45 +197,7 @@
 
  /* Galería */
 
-
-#imagenes__galeria{
-    display: none;
-
-    @include c.desktop{
-        width: 100%;
-        height: 90vh;
-        border: none;
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-    }
-
-    img{
-        @include c.desktop{
-            width: 500px;
-            height: 300px;
-        }
-    }
-
-}
-
-#carouselExampleIndicators1{
-    @extend #box__2; 
-    padding-top: 40px;
-    width: 100%;
-    height: 400px;
-
-    @include c.desktop{
-        display: none;
-    }
-}
-
-
-#box__7{
+ #box__7{
     @extend #box__1; 
 
     @include c.desktop{
@@ -249,11 +215,84 @@
 
 }
 
+#imagenes__galeria{
+    display: none;
+
+    @include c.desktop{
+        width: 100%;
+        height: 70%;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        gap: 40px;
+    }
+
+    img{
+        @include c.desktop{
+            width: 500px;
+            height: 300px;
+        }
+    }
+
+}
+
+#carouselExampleIndicators1{
+    @extend #box__2; 
+    padding-top: 40px;
+    width: 100%;
+    height: 70vh;
+
+    @include c.desktop{
+        display: none;
+    }
+}
+
+/*Contacto*/
+#box__contact{
+    grid-area: acerca;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 90vh;
+
+    @include c.desktop{
+        width: 100%;
+        height: 550px;
+        color: map-get(c.$colores,"texto");
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+        gap: 50px;
+
+        .acerca__de{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        img{
+            width: 700px;
+        }
+
+    }
+}
 
 #formulario{
     width: 60%;
     border: solid 1px map-get(c.$colores,"titulos");
     padding: 10px;
+    margin-top: 80px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -261,7 +300,27 @@
     box-sizing: border-box;
 
     @include c.desktop{
+        width: 40%;
         padding: 20px;
     }
+
+    .boton__comprar{
+        background: map-get(c.$colores,"fondo1");
+        display: block;
+        padding: 10px;
+        color: map-get(c.$colores,"texto");
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 auto;
+
+        &:hover{
+            background-color: #0693e3;
+        }
+
+    }
+
 }
 
